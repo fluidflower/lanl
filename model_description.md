@@ -15,31 +15,29 @@ Here, ![\alpha](https://render.githubusercontent.com/render/math?math=%5Cdisplay
 ![{\boldsymbol{F}}_i^{{\alpha}}= {\boldsymbol{q}}_{{\alpha}}^{}\eta_{{\alpha}}^{} x_i^{{\alpha}} - \varphi s_{{\alpha}}^{} D_{{\alpha}}^{} \eta_{{\alpha}}^{} {\boldsymbol{\nabla}}x_i^{{\alpha}},
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%7B%5Cboldsymbol%7BF%7D%7D_i%5E%7B%7B%5Calpha%7D%7D%3D+%7B%5Cboldsymbol%7Bq%7D%7D_%7B%7B%5Calpha%7D%7D%5E%7B%7D%5Ceta_%7B%7B%5Calpha%7D%7D%5E%7B%7D+x_i%5E%7B%7B%5Calpha%7D%7D+-+%5Cvarphi+s_%7B%7B%5Calpha%7D%7D%5E%7B%7D+D_%7B%7B%5Calpha%7D%7D%5E%7B%7D+%5Ceta_%7B%7B%5Calpha%7D%7D%5E%7B%7D+%7B%5Cboldsymbol%7B%5Cnabla%7D%7Dx_i%5E%7B%7B%5Calpha%7D%7D%2C%0A)
 ![x_i^{\alpha}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+x_i%5E%7B%5Calpha%7D) denotes the mole fraction of species ![i](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+i) satisfying 
-![\sum_i x_i^\alpha=1,](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_i+x_i%5E%5Calpha%3D1%2C)
+![\sum_i x_i^\alpha=1,](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_i+x_i%5E%5Calpha%3D1%2C).
 
+See https://www.pflotran.org/documentation/theory_guide/mode_mphase.html#governing-equations for more details.
 ### Constitutive relations
 
 #### Fluid-matrix interaction
 
-* **Capillary pressure:** _E.g._ Brooks-Corey
-  ![p_c(S_{l}) = p_\text{entry}S_{le}^{-1/\lambda}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+p_c%28S_%7Bl%7D%29+%3D+p_%5Ctext%7Bentry%7DS_%7Ble%7D%5E%7B-1%2F%5Clambda%7D%0A)
-  Linear curves were used
+* **Capillary pressure:**   Linear curves were used
 
-* **Relative permeability:** ...
+* **Relative permeability:** 
 Linear curves were used
 
 #### Phase composition: Applied equations of state
 
-* **CO2 in liquid phase:** ...
+* **CO2 in liquid phase:** Duan, Zhenhao, and Rui Sun. "An improved model calculating CO2 solubility in pure water and aqueous NaCl solutions from 273 to 533 K and from 0 to 2000 bar." Chemical geology 193.3-4 (2003): 257-271.
 
-* **Water in gas phase:** ...
+* **Water in gas phase:** 
 
 #### Density
 
-* **Liquid phase:** ...
+* **Liquid phase:** International Formulation Committee of the Sixth International Conference on Properties of Steam (1967)
 
-* **Gas phase:** ...
-
+* **Gas phase:** Span, Roland, and Wolfgang Wagner. "A new equation of state for carbon dioxide covering the fluid region from the triple‐point temperature to 1100 K at pressures up to 800 MPa." Journal of physical and chemical reference data 25.6 (1996): 1509-1596.
 ### Spatial parameters
 
 _Please provide the relevant facies parameters as a csv file._<br>
@@ -49,15 +47,19 @@ _Obviously, the number and type of parameters for your model might differ from t
 ## Numerics
 
 ### Coupling of flow and transport, temporal and spatial discretization
-
 _E.g._ Fully coupled, fully implicit, cell-centered FV with TPFA.
+
+1. Flow and transport are spatially discretized using two-point flux finite volume. Backward Euler was used for temporal discretization with adaptive time-stepping. 
+2. In case of tracer tests flow and transport are coupled sequentially.
+3. For CO2 flow/transport, full two-phase two-component mass balance equations are solved in a fully coupled fashion.
+
 
 ### Linearization and Solvers
 
 _E.g._ Newton with line search, AMG-preconditioned BiCGSTAB for the linear systems.
+Newton outer loop with FGMRES linear solver along with CPR pre-conditioning was used.
 
 ### Primary Variables
 
 _E.g._ Dependent on local phase composition:
-* Both phases present:
-  ![p_l, S_g](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+p_l%2C+S_g%0A)...
+* Variable switching: see details in https://www.pflotran.org/documentation/theory_guide/mode_mphase.html#governing-equations
