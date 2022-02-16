@@ -3,6 +3,9 @@ _You may use https://tex-image-link-generator.herokuapp.com/ to render math form
 
 ## Physics
 
+We used the HPC porous media code PFLOTRAN https://www.pflotran.org/documentation/index.html for our modeling. We also used FEHM initially (https://fehm.lanl.gov/) and got similar results. We have since then continued to use PFLOTRAN.
+
+
 ### PDEs
 
 _E.g._ One mass balance per component water and CO2.
