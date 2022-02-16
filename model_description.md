@@ -23,8 +23,10 @@ Here, ![\alpha](https://render.githubusercontent.com/render/math?math=%5Cdisplay
 
 * **Capillary pressure:** _E.g._ Brooks-Corey
   ![p_c(S_{l}) = p_\text{entry}S_{le}^{-1/\lambda}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+p_c%28S_%7Bl%7D%29+%3D+p_%5Ctext%7Bentry%7DS_%7Ble%7D%5E%7B-1%2F%5Clambda%7D%0A)
+  Linear curves were used
 
 * **Relative permeability:** ...
+Linear curves were used
 
 #### Phase composition: Applied equations of state
 
