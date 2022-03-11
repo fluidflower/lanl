@@ -41,6 +41,19 @@ Linear curves were used
 * **Liquid phase:** International Formulation Committee of the Sixth International Conference on Properties of Steam (1967)
 
 * **Gas phase:** Span, Roland, and Wolfgang Wagner. "A new equation of state for carbon dioxide covering the fluid region from the triple‐point temperature to 1100 K at pressures up to 800 MPa." Journal of physical and chemical reference data 25.6 (1996): 1509-1596.
+
+#### Solubility limit
+
+_Please provide the assumed solubility limit of CO2 in liquid phase at the tank bottom in kg/m<sup>3</sup>._
+
+### Temperature
+
+_Please provide the assumed temperature inside the computational domain in °C._
+
+### Domain volume
+
+_Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
+
 ### Spatial parameters
 
 _Please provide the relevant facies parameters as a csv file._<br>
@@ -66,3 +79,15 @@ Newton outer loop with FGMRES linear solver along with CPR pre-conditioning was 
 
 _E.g._ Dependent on local phase composition:
 * Variable switching: see details in https://www.pflotran.org/documentation/theory_guide/mode_mphase.html#governing-equations
+
+### Computational Grid
+
+_Please provide the number and shape of grid elements._
+
+### Performance
+
+| Indicator                            |  Average |      Min |      Max |
+|:-------------------------------------|---------:|---------:|---------:|
+| time step size [s]                   | 1.23e+56 | 1.23e+56 | 1.23e+56 |
+| # nonlinear iterations per time step |      123 |      123 |      123 |
+| # linear iterations per solve        |      123 |      123 |      123 |
