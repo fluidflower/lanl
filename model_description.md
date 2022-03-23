@@ -49,10 +49,13 @@ _Please provide the assumed solubility limit of CO2 in liquid phase at the tank 
 ### Temperature
 
 _Please provide the assumed temperature inside the computational domain in °C._
+20 C throughout
 
 ### Domain volume
 
 _Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
+Total domain volume: 0.08184 
+Total pore volume: 0.03578
 
 ### Spatial parameters
 
@@ -83,6 +86,8 @@ _E.g._ Dependent on local phase composition:
 ### Computational Grid
 
 _Please provide the number and shape of grid elements._
+Tri Delauney elements are converted to Voronoi
+Number of voronoi cells: 24748
 
 ### Performance
 
