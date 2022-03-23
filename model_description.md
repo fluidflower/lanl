@@ -49,11 +49,13 @@ _Please provide the assumed solubility limit of CO2 in liquid phase at the tank 
 ### Temperature
 
 _Please provide the assumed temperature inside the computational domain in °C._
+
 20 C throughout
 
 ### Domain volume
 
 _Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
+
 Total domain volume: 0.08184 
 Total pore volume: 0.03578
 
