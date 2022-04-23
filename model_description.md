@@ -44,20 +44,16 @@ Linear curves were used
 
 #### Solubility limit
 
-_Please provide the assumed solubility limit of CO2 in liquid phase at the tank bottom in kg/m<sup>3</sup>._
+1.67 kg/m3
 
 ### Temperature
-
-_Please provide the assumed temperature inside the computational domain in °C._
 
 20 C throughout
 
 ### Domain volume
 
-_Please provide the assumed total volume of the computational domain in m<sup>3</sup>._
-
-Total domain volume: 0.08184 
-Total pore volume: 0.03578
+Total domain volume: 0.08184 m3
+Total pore volume: 0.03578m3
 
 ### Spatial parameters
 
