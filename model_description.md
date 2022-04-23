@@ -90,4 +90,4 @@ Number of voronoi cells: 24748
 |:-------------------------------------|---------:|---------:|---------:|
 | time step size [s]                   | 6 | 6.e-6 | 6 |
 | # nonlinear iterations per time step |      1 |      1 |      1 |
-| # linear iterations per solve        |      1 |      1 |      1 |
+| # linear iterations per solve        |      2 |      2 |      5 |
