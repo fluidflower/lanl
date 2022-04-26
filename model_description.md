@@ -61,7 +61,6 @@ Parameters can be found in [spatial_parameters.csv](spatial_parameters.csv).<br>
 ## Numerics
 
 ### Coupling of flow and transport, temporal and spatial discretization
-_E.g._ Fully coupled, fully implicit, cell-centered FV with TPFA.
 
 1. Flow and transport are spatially discretized using two-point flux finite volume. Backward Euler was used for temporal discretization with adaptive time-stepping. 
 2. In case of tracer tests flow and transport are coupled sequentially.
@@ -70,17 +69,14 @@ _E.g._ Fully coupled, fully implicit, cell-centered FV with TPFA.
 
 ### Linearization and Solvers
 
-_E.g._ Newton with line search, AMG-preconditioned BiCGSTAB for the linear systems.
 Newton outer loop with FGMRES linear solver along with CPR pre-conditioning was used.
 
 ### Primary Variables
 
-_E.g._ Dependent on local phase composition:
 * Variable switching: see details in https://www.pflotran.org/documentation/theory_guide/mode_mphase.html#governing-equations
 
 ### Computational Grid
 
-_Please provide the number and shape of grid elements._
 Tri Delauney elements are converted to Voronoi
 Number of voronoi cells: 24748
 
